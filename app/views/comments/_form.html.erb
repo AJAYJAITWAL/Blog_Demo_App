@@ -1,0 +1,11 @@
+<%= bootstrap_form_with(model: [ @post, @post.comments.build ], remote: true) do |form| %>
+  <p>
+    <b><%= form.text_field :commenter %></b>
+  </p>
+  <p>
+    <b><%= form.text_area :body %></b>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

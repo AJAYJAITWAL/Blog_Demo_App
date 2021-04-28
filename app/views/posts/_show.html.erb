@@ -1,0 +1,13 @@
+<div class="container">
+  <h1><%= @post.title %></h1>
+
+  <p><%= @post.body %></p>
+  
+  <h2 style="color:#006680;"><b>Comments</b></h2>
+  <%= render @post.comments %>
+   
+  <h2 style="color:#007a99;">Add a comment:</h2>
+  <%= render 'comments/form' %>
+
+  <%= link_to 'Back', posts_path, :class => 'btn btn-primary' %>
+</div>

@@ -1,0 +1,16 @@
+<div class="delete_<%= comment.id %>">
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+  <p>
+    <%= link_to 'Destroy Comment', [comment.post, comment],
+                remote: true,
+                method: :delete,
+                data: { confirm: 'Are you sure?'}, :class => "button btn btn-outline-warning btn-xs"%>
+  </p>
+</div>

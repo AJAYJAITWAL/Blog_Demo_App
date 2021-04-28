@@ -1,0 +1,11 @@
+<div class="container my-3">
+  <div id="new_post_id" class="mb-3">
+    <%= link_to "New Post", new_post_path, class: "btn btn-info btn-lg", remote: true %>
+  </div>
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= render partial: 'post', locals:{ post: post } %>
+    <% end %>
+  </div>
+  <%= will_paginate @posts, render: WillPaginate::ActionView::BootstrapLinkRenderer %>
+</div>
